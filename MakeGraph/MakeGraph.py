@@ -19,7 +19,7 @@ trigger = False
 for line in fP:
     if trigger == False:
         tmpbuf = line.split('\t')
-        if tmpbuf[0] == "Roll":
+        if (tmpbuf[0] == "Roll") or (tmpbuf[0] == "OutRoll"):
             trigger = True
             fPw.write(line)
     else:
@@ -45,5 +45,8 @@ for col in data.columns.array:
 
 if os.path.exists("tmp.png"):
     os.remove("tmp.png") 
+
+if os.path.exists("Data/csm.tmp"):
+    os.remove("Data/csm.tmp") 
 
 #%%
