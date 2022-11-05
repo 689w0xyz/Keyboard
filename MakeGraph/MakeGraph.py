@@ -31,7 +31,7 @@ data=pd.read_csv(fileNameW, sep="\t")
 # data.head()
 
 for col in data.columns.array:
-    if (col != "TEST_ON_TIME") and (col != "Roll"):
+    if (col != "TEST_ON_TIME") and (col != "Roll") and (col != "OutRoll"):
         #print(col)
         plt.figure(figsize=(50,7))
         plt.ylim([0,5])
