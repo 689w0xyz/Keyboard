@@ -43,4 +43,7 @@ for col in data.columns.array:
         cropImg = img.crop((590,45,4550,660))
         cropImg.save('Data/{}.png'.format(col))
 
+if os.path.exists("tmp.png"):
+    os.remove("tmp.png") 
+
 #%%
